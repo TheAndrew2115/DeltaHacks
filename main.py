@@ -2,13 +2,17 @@ from flask import Flask, render_template, request
 from werkzeug import secure_filename
 import tensorflow as tf
 import shutil
+from tensorflow.keras.models import load_model
+import cv2
+import os
+import numpy as np
 
-model = load_model("../Invasive Species Detector")
+model = load_model("./Invasive Species Detector")
 
 app = Flask(__name__)
 
 def getName(speciesID):
-    return "";
+    return ""
 
 @app.route("/")
 def home():
@@ -26,12 +30,30 @@ def upload_file():
       print("success")
       print(f.filename)
 
-      shutil.move(f.filename,"../static/images/"+f.filename.ToString())
+      shutil.move(f.filename,"./static/images/"+f.filename)
 
-      predictions = model.predict(f)
+      newFile = "./static/images/"+f.filename
 
-      invasive = True;  #This will control which page to go to
-      speciesID = 0; # other numbers for other species
+      print("ABOUT TO PREDICT")
+      img_array = cv2.imread(newFile)
+      new_size = cv2.resize(img_array, (180,180))
+      print("RESIZED")
+      arrays = []
+      arrays.append(new_size)
+      arrays = np.array(arrays).reshape(-1,180,180,3)
+      predictions = model.predict(arrays)
+      print(np.argmax(predictions[0]))
+      print("WE GOT HERE")
+
+      speciesID = np.argmax(predictions[0])
+      print("THE FUCKING VALUE IS: ",speciesID)
+
+      invasive = False;  #This will control which page to go to
+
+      if speciesID == 8:
+          invasive = False;
+      else:
+          invasive = True;
 
       speciesName = "";
 
