@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Scanner</title>
     <meta charset="utf-8">
     <title>About Flask</title>
+    <link rel="stylesheet" href="../static/css/about.css">
+    <noscript><link rel="stylesheet" href="../static/css/about.css" /></noscript>
   </head>
   <body>
-    {% extends "template.html" %}
-    {% block content %}
+    <div id="topBar">
+      <a href="{{ url_for('home') }}" id="backLink"> <- Home </a>
+    </div>
 
-    <h1> About Flask </h1>
-    <p> Flask is a micro web framework written in Python.</p>
-    <p> Applications that use the Flask framework include Pinterest,
-      LinkedIn, and the community web page for Flask itself.</p>
+    <h1> Insert Sick Ass App Name </h1>
 
-    {% endblock %}
+    <p>Ontario has more invasive species than any other province or territory
+    in Canada. There are more than 180 invasive aquatic animals in the Great
+    Lakes and more than 440 invasive plants in Southern Ontario. These non-native
+    flora and fauna present mild-to-severe risks to local ecosystems and to the
+    Ontarian economy. Our mission is to help you identify any invasive species you
+    may encounter from your camping trips to Muskoka to your walks in Rouge Park.</p>
+
+    <p>Submit an image below and we'll determine if its an invasive species or not.</p>
+
+    <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+    </form>
+
+    <p>Please ensure the animal/plant is placed as clear and as close to the middle of
+      the picture as possible.</p>
   </body>
 </html>
