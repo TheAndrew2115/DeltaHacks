@@ -17,6 +17,7 @@ def upload_file():
       f = request.files['file']
       f.save(secure_filename(f.filename))
       print("success")
+      print(f.filename)
       return 'file uploaded successfully'
 
 if __name__ == "__main__":
