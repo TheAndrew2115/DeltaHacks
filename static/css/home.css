@@ -1,11 +1,17 @@
 body {
-    background-color: lightgreen;
+    background-image:url('Collage.jpg');
+    background-size: 100% 100%;
+    background-attachment:fixed;
+
 }
 
 h1{
     color: darkgreen;
-    font-family:"Calibri"
+    font-family: "Calibri";
+    font-size:10px;
+    padding-top:50px;
 }
+
 
 .container {
     position: relative;
