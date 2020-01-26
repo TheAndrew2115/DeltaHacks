@@ -19,7 +19,7 @@ def upload_file():
       print("success")
       print(f.filename)
 
-      invasive = True;  #This will control which page to go to
+      invasive = False;  #This will control which page to go to
       speciesID = 0; #0 means noninvasive, other numbers for other species
 
       if invasive:
