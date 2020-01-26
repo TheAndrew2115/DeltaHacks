@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+html {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: #ffffff;
+	background-image: url(), linear-gradient(60deg, rgba(73, 226, 81, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
+	background-repeat: repeat,			no-repeat,			no-repeat;
+	background-size: 100px 100px, cover,				cover;
+	background-position: top left,		center center,		bottom center;
+	background-attachment: fixed,			fixed,				fixed;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  height: 50px;
+  background-color: #eeeeee;
+  display: flex;
+  width: 75px;
+  text-align: center;
+  padding: auto;
+}
+
+h1 {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  cursor: default;
+
+  max-width: 100%;
+  opacity: 0.95;
+  position: relative;
+  text-align: center;
+  margin-top: 1em;
+  width: 27em;
+  height: 30px;
+}
+
+#images {
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  height: 200px;
+  width: 925px;
+  position: relative;
+  justify-content: center;
+}
+
+.contents {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#topBar {
+  border-bottom-style: solid;
+  border-bottom-color: #236666;
+  border-bottom-width: 2px;
+  height: 50px;
+  background-color: #11ccdd;
+}

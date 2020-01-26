@@ -20,8 +20,12 @@ def upload_file():
       print(f.filename)
 
       invasive = True;  #This will control which page to go to
+      speciesID = 0; #0 means noninvasive, other numbers for other species
 
-      return 'file uploaded successfully'
+      if invasive:
+          return render_template("invasive.html", name = f.filename)
+      else:
+          return render_template("notinvasive.html", name = f.filename)
 
 @app.route("/invasive")
 def invasive():
