@@ -8,11 +8,11 @@ Tensorflow to train our image-recognition neural network to distinguish between 
 Ontario, Canada. 
 
 First you will be greeted by this homepage:
-![Board](./InvFindFrontPage.png)
+![Front](./InvFindFrontPage.png)
 
 Which leads you to this page. Press the button circled in red and you will have the option to upload your own photo of an 
 alleged invasive species. Press submit and our neural network will tell you if you encountered one.
-![Board](./submitPage.png)
+![SubmitPage](./submitPage.png)
 
 If you did indeed encounter an invasive species, you will be led to a page that tells you so. If not, you will be led to a page
 that will thank you for your effort in keeping our ecosystems safe :)
