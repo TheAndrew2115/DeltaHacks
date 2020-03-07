@@ -16,3 +16,5 @@ alleged invasive species. Press submit and our neural network will tell you if y
 
 If you did indeed encounter an invasive species, you will be led to a page that tells you so. If not, you will be led to a page
 that will thank you for your effort in keeping our ecosystems safe :)
+
+README to be continued...
