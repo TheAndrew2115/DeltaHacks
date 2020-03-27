@@ -46,7 +46,6 @@ def upload_file():
       print("WE GOT HERE")
 
       speciesID = np.argmax(predictions[0])
-      print("THE FUCKING VALUE IS: ",speciesID)
 
       invasive = False;  #This will control which page to go to
 
